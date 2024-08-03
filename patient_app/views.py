@@ -86,7 +86,7 @@ class AppointmentTemplateView(TemplateView):
         return render(request, 'appointment.html', {})
 
 class ManageAppointmentTemplateView(LoginRequiredMixin,ListView):
-    template_name='manage-Appointments.html'
+    template_name='manage-appointments.html'
     login_url = '/login/'
     model=Appointment
     context_object_name= 'appointments'
