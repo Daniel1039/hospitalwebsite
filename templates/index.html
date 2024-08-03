@@ -1,0 +1,510 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!--Home Slider Start-->
+    <div class="banner">
+        <div class="home-slider owl-carousel">
+            <!--Banner Item Start-->
+            <div class="banner-item slide1 overlay">
+                <div class="container">
+                    <div class="head1">
+                        <h2 class="text-white">Get Our Best <span class="text-primary">Care</span> With Us</h2>
+                    </div>
+                    <div class="para1">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus eius recusandae amet iure et iusto animi ipsa maxime, deserunt sint laborum accusamus.</p>
+                    </div>
+                    <div class="banner-btn overflow-hidden">
+                        <a href="{% url 'appointment' %}" class="btn btn-primary">make-an-appointment</a>
+                        <a href="{% url 'about' %}" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--Banner Item End-->
+            
+            <!--Banner Item Start-->
+            <div class="banner-item slide2 overlay">
+                <div class="container">
+                    <div class="head1">
+                        <h2 class="text-white">We have  <span class="text-primary">Latest</span> Version</h2>
+                    </div>
+                    <div class="para1">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus eius recusandae amet iure et iusto animi ipsa maxime, deserunt sint laborum accusamus.</p>
+                    </div>
+                    <div class="banner-btn overflow-hidden">
+                        <a href="{% url 'appointment' %}" class="btn btn-primary">make-an-appointment</a>
+                        <a href="{% url 'about' %}" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--Banner Item End-->
+
+            <!--Banner Item Start-->
+            <div class="banner-item slide3 overlay">
+                <div class="container">
+                    <div class="head1">
+                        <h2 class="text-white">All Time <span class="text-primary">Expert</span> Dotors</h2>
+                    </div>
+                    <div class="para1">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus eius recusandae amet iure et iusto animi ipsa maxime, deserunt sint laborum accusamus.</p>
+                    </div>
+                    <div class="banner-btn overflow-hidden">
+                        <a href="{% url 'appointment' %}" class="btn btn-primary">make-an-appointment</a>
+                        <a href="{% url 'contact' %}" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--Banner Item End-->
+        </div>
+    </div>
+    <!--Home Slider End-->
+
+    <!--Facilities Section End-->
+    <div class="facilities bg-light section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!--Iconbox Start-->
+                    <div class="iconbox bg-white">
+                        <div class="icon text-center">
+                            <span><i class="fa-solid fa-user-md"></i></span>
+                        </div>
+                        <div class="title text-center">
+                            <h4>All Time Doctors</h4>
+                        </div>
+                        <div class="description text-center">
+                            <p>Dolor corp ris sit volup tatem in magnam velit ipsam volu ptat ibus, rati one conse quatur tempora vero fugit sequi ali quam error aperiam magnam velit ipsam.</p>
+                        </div>
+                    </div>
+                    <!--Iconbox Start-->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!--Iconbox Start-->
+                    <div class="iconbox bg-white">
+                        <div class="icon text-center">
+                            <span><i class="fa-solid fa-wheelchair"></i></span>
+                        </div>
+                        <div class="title text-center">
+                            <h4>Ready Wheelchairs</h4>
+                        </div>
+                        <div class="description text-center">
+                            <p>Dolor corp ris sit volup tatem in magnam velit ipsam volu ptat ibus, rati one conse quatur tempora vero fugit sequi ali quam error aperiam magnam velit ipsam.</p>
+                        </div>
+                    </div>
+                    <!--Iconbox Start-->
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <!--Iconbox Start-->
+                    <div class="iconbox bg-white">
+                        <div class="icon text-center">
+                            <span><i class="fa-solid fa-medkit"></i></span>
+                        </div>
+                        <div class="title text-center">
+                            <h4>Emergency Services</h4>
+                        </div>
+                        <div class="description text-center">
+                            <p>Dolor corp ris sit volup tatem in magnam velit ipsam volu ptat ibus, rati one conse quatur tempora vero fugit sequi ali quam error aperiam magnam velit ipsam.</p>
+                        </div>
+                    </div>
+                    <!--Iconbox Start-->                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Facilities Section End-->
+    
+    <!--Appointment Section Start-->
+    <section class="appointment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="single-thumb text-center">
+                        <img class="w-75" src="{% static 'img/appointment.jpg'%}" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-form bg-primary p-5">                        
+                        <h2 class="title-lg text-white">Book an Appointment</h2>
+                        <br>
+                        <p class="text-white">Use the following form to contact us and request an appointment..</p>
+                        <br>
+                        <form method="POST" action="{% url 'appointment' %}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 form-group mb-3">
+                                    <input type="text" id="fname" name="fname"  placeholder="First Name" class="form-control">
+                                </div>
+                                
+                                <div class="col-md-6 form-group mb-3">
+                                    <input type="text" id="lname" name="lname" placeholder="Last Name" class="form-control">
+                                </div>
+                                
+                                <!-- <div class="form-group mb-3 col-md-12">
+                                    <select class="niceselect">
+                                        <option value="" data-display="Choose Department">Anesthetics</option>
+                                        <option value="">Cardiology</option>
+                                        <option value="">Chaplaincy</option>
+                                        <option value="">Haematology</option>
+                                        <option value="">General Surgery</option>
+                                    </select>
+                                </div> -->
+                                <div class="form-group mb-3 col-md-12">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="form-group mb-3 col-md-12">
+                                    <input type="text" id="mob" name="mobile" class="form-control" placeholder="phone number">
+                                </div>
+                                
+                                <div class="form-group mb-3 col-md-12">
+                                    <textarea class="form-control" rows="7" id="ans" name="request" placeholder="Your result"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Book Now" class="btn btn-light">
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Appointment Section Start-->
+    
+    <!--Pricing Plan Start-->
+    <section class="pricing section-padding">
+        <div class="container">
+            <div class="section-title">                
+                <h2 class="title-lg text-center">Checkup Packages</h2>
+                <div class="separator text-center">
+                    <span class="line-pre bg-primary"></span>
+                    <span class="shape bg-primary"></span>
+                    <span class="line-post bg-primary"></span>
+                </div>
+                <div class="description text-center">
+                    <p>Consec tetur totam incidunt tenetur iste iure, nobis quam non recus andae consequ atur excep turi nihil animi autem porro conse qu untur.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <!--Pricing Item Start-->
+                    <div class="pricing-item">
+                        <div class="pricing-title">
+                            <h4 class="text-white">Personal</h4>
+                            <div class="price text-white">
+                                <span class="currency">$</span>
+                                <span class="amount">50</span>
+                                <span class="period">/ Month</span>
+                            </div>
+                        </div>
+                        <div class="checklist">
+                            <ul>
+                                <li>Monthly Checkup</li>
+                                <li>Monthly Diode Chart</li>
+                                <li>Quick Support</li>
+                                <li>Up to 5 Free Test</li>
+                                <li>Free Health Suggetions</li>
+                                <li>Online Help</li>
+                            </ul>
+                        </div>
+                        <div class="buy-link text-center">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--Pricing Item End-->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!--Pricing Item Start-->
+                    <div class="pricing-item">
+                        <div class="pricing-title">
+                            <h4 class="text-white">Family</h4>
+                            <div class="price text-white">
+                                <span class="currency">$</span>
+                                <span class="amount">100</span>
+                                <span class="period">/ Month</span>
+                            </div>
+                        </div>
+                        <div class="checklist">
+                            <ul>
+                                <li>Monthly Checkup</li>
+                                <li>Monthly Diode Chart</li>
+                                <li>Quick Support</li>
+                                <li>Up to 5 Free Test</li>
+                                <li>Free Health Suggetions</li>
+                                <li>Online Help</li>
+                            </ul>
+                        </div>
+                        <div class="buy-link text-center">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--Pricing Item End-->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!--Pricing Item Start-->
+                    <div class="pricing-item">
+                        <div class="pricing-title">
+                            <h4 class="text-white">Employees</h4>
+                            <div class="price text-white">
+                                <span class="currency">$</span>
+                                <span class="amount">500</span>
+                                <span class="period">/ Month</span>
+                            </div>
+                        </div>
+                        <div class="checklist">
+                            <ul>
+                                <li>Monthly Checkup</li>
+                                <li>Monthly Diode Chart</li>
+                                <li>Quick Support</li>
+                                <li>Up to 5 Free Test</li>
+                                <li>Free Health Suggetions</li>
+                                <li>Online Help</li>
+                            </ul>
+                        </div>
+                        <div class="buy-link text-center">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!--Pricing Item End-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Pricing Plan End-->
+
+    <!--Services Start-->
+    <section class="services-section section-padding bg-light">
+        <div class="container">
+            <div class="section-title">                
+                <h2 class="title-lg text-center">Our Services</h2>
+                <div class="separator text-center">
+                    <span class="line-pre bg-primary"></span>
+                    <span class="shape bg-primary"></span>
+                    <span class="line-post bg-primary"></span>
+                </div>
+                <div class="description text-center">
+                    <p>Consec tetur totam incidunt tenetur iste iure, nobis quam non recus andae consequ atur excep turi nihil animi autem porro conse qu untur.</p>
+                </div>
+            </div>
+            <div class="services mt-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-ambulance"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Emergency Ambulance</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-bone"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Bone Surgery</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-disease"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Disease Surgery</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-laptop-medical"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Online Assistance</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-id-card-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Family Doctors</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <!--Service Item Start-->
+                        <div class="service-item bg-white p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-lungs"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="title">Lung Treatments</h6>
+                                    <p>Fugit quasi eos lauda ntium imp edit dele ctus ut consec tetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Service Item End-->                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Services Start-->
+
+    <!--Call to action start-->
+    <div class="cta section-padding bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="info">
+                        <h3 class="text-white mb-2">Need a doctor for quick checkup?</h3>
+                        <p class="text-white">Adipi sicing elit equi beatae officia volup tatem dolorem dolores esse accusa ntium cupid itate mollitia asper natur. Veniam culpa, enim atque ratione adipisci quo volup tate esse autem disti nctio.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="cta-block bg-white">
+                        <span><i class="fa-solid fa-headphones-alt"></i> Call Now: 000 111 222</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Call to action end-->
+
+    <!--Team Section Start-->
+    <section class="team-section section-padding bg-light">
+        <div class="container">
+            <div class="section-title">                
+                <h2 class="title-lg text-center">Our Doctors</h2>
+                <div class="separator text-center">
+                    <span class="line-pre bg-primary"></span>
+                    <span class="shape bg-primary"></span>
+                    <span class="line-post bg-primary"></span>
+                </div>
+                <div class="description text-center">
+                    <p>Consec tetur totam incidunt tenetur iste iure, nobis quam non recus andae consequ atur excep turi nihil animi autem porro conse qu untur.</p>
+                </div>
+            </div>
+            <div class="members mt-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-sm-6">
+                        <!--Member Start-->
+                        <div class="member bg-white">
+                            <div class="member-thumb">
+                                <img src="{% static 'img/members/2.jpg' %}" alt="Image"> 
+                                <div class="member-social">
+                                    <ul>
+                                        <li class="facebook"><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#" title="Twiiter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Md Dalwar Hossan</h4>
+                                <b>Junior Consultant</b>
+                                <p>Moles tiae sapi ente rem ape riam susc ipit cupid itate volu pta tibus ipsum ab quas harum fugit.</p>
+                            </div>                           
+                        </div>
+                        <!--Member End-->
+                    </div>                    
+                    <div class="col-xl-4 col-md-6 col-sm-6">
+                        <!--Member Start-->
+                        <div class="member bg-white">
+                            <div class="member-thumb">
+                                <img src="{% static 'img/members/3.jpg' %}" alt="Image">
+                                <div class="member-social">
+                                    <ul>
+                                        <li class="facebook"><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#" title="Twiiter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Md Suman Ahmed</h4>
+                                <b>Cardiology Head</b>
+                                <p>Moles tiae sapi ente rem ape riam susc ipit cupid itate volu pta tibus ipsum ab quas harum fugit.</p>
+                            </div>                           
+                        </div>
+                        <!--Member End-->
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-sm-6">
+                        <!--Member Start-->
+                        <div class="member bg-white">
+                            <div class="member-thumb">
+                                <img src="{% static 'img/members/4.jpg'%}" alt="Image"> 
+                                <div class="member-social">
+                                    <ul>
+                                        <li class="facebook"><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#" title="Twiiter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Priyanka Chowdhury</h4>
+                                <b>Cancer Expert</b>
+                                <p>Moles tiae sapi ente rem ape riam susc ipit cupid itate volu pta tibus ipsum ab quas harum fugit.</p>
+                            </div>                           
+                        </div>
+                        <!--Member End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Team Section Start-->
+
+{% endblock %}
