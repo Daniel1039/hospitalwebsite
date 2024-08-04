@@ -71,6 +71,7 @@ class AppointmentTemplateView(TemplateView):
         lname= request.POST.get('lname')
         email= request.POST.get('email')
         mobile= request.POST.get('mobile')
+        department= request.POST.get('department')
         message= request.POST.get('request')
         
         appointment=Appointment.objects.create (
@@ -78,6 +79,7 @@ class AppointmentTemplateView(TemplateView):
             last_name= lname,
             email =email,
             phone= mobile,
+            department = department,
             request= message,
         )
         appointment.save()
