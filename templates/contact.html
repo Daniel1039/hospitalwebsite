@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--Banner Item Start-->
+<div class="banner">
+    <div class="banner-item page-banner banner-bg overlay">
+        <div class="container">
+            <div class="head1">
+                <h2 class="text-white">Contact Us</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Banner Item End-->
+
+<!--Main Content Start-->
+<section class="contact">
+    <div class="container pt-5 pb-5">
+        <div class="contact-info">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info border text-center p-4">
+                        <h4>Talk to Us:</h4>
+                        <span>+2349068398792</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info border text-center p-4">
+                        <h4>Our Address:</h4>
+                        <span>NIGERIA</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info border text-center p-4">
+                        <h4>Email Us:</h4>
+                        <span>makanjuola1039@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form pt-5 pb-5">
+            <div class="section-title mb-5">
+                <h2 class="title-lg text-center">Get in Touch</h2>
+                <div class="separator text-center">
+                    <span class="line-pre bg-primary"></span>
+                    <span class="shape bg-primary"></span>
+                    <span class="line-post bg-primary"></span>
+                </div>
+                <div class="description text-center">
+                    <p>We’re here to help you! If you have any questions, need assistance, please don’t hesitate to reach out. please reach out using our Contact Form. Your health and well-being are our top priorities!</p>
+                </div>
+            </div>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form id="contact-form" action="{% url 'home'%}" method="POST">
+                {% csrf_token %}
+                <div class="success"></div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group mb-3">
+                            <input id="name-field" type="text" name="form-name" placeholder="Your Name"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group mb-3">
+                            <input id="email-field" type="email" name="form-email" placeholder="Your Email"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group mb-3">
+                            <input id="phone-field" type="text" name="form-phone" placeholder="Your Phone"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group mb-3">
+                            <textarea id="message-field" name="form-message" placeholder="Your Message"
+                                class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary">Send Us</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="google-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.915497409884!2d92.21002221449697!3d22.507353435216416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad4958469c4f95%3A0x48f23b1d4741fded!2zQmFuZ2xhZGVzaCBTd2VkZW4gUG9seXRlY2huaWMgSW5zdGl0dXRlIFRlYWNoZXJzJyBDb2xvbnksIOCmleCmvuCmquCnjeCmpOCmvuCmhw!5e0!3m2!1sbn!2sbd!4v1611913618230!5m2!1sbn!2sbd"
+            height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</section>
+<!--Main Content End-->
+
+{% endblock %}
