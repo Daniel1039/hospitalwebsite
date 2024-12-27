@@ -13453,3 +13453,95 @@ footer.bg-dark .footer-social ul li a:hover {
     outline: 0;
     box-shadow: none
 }
+@media (max-width: 768px) {
+  .carousel-item img {
+      height: auto;
+  }
+  
+  .carousel-inner {
+      height: 100%;
+  }
+  
+  .position-absolute {
+      font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+}
+
+
+    /* Ensuring text is white */
+    .carousel-item .carousel-text {
+        color: white !important;
+        font-size: 2.5rem; /* Default font size */
+    }
+
+    /* Centering the carousel content */
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%; /* Ensure full width */
+    }
+
+    /* Adding space between the text and the buttons */
+    .carousel-item .banner-btn {
+        margin-top: 10px;
+    }
+
+    .carousel-item .banner-btn .btn {
+        margin-bottom: 15px;
+        /* font-size: medium !important; */
+        border-width: 0px;
+    }
+
+    /* Buttons are also responsive */
+    .carousel-item .banner-btn .btn {
+        padding: 15px 30px;
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+        .carousel-item .carousel-text {
+            font-size: 1.8rem; /* Smaller text on mobile */
+            padding: 0 15px;
+        }
+
+        .carousel-item .banner-btn .btn {
+            width: 80%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-item .carousel-caption {
+            top: 50% !important; /* Ensure the text remains centered on mobile */
+        }
+    }
+
+    /* Position the previous and next buttons beside the text */
+    .custom-prev, .custom-next {
+        position: absolute;
+        top: 50%; /* Vertically center the buttons */
+        transform: translateY(-50%);
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5); /* Make buttons slightly transparent */
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    /* Position the buttons to the left and right of the text */
+    .custom-prev {
+        left: 10%;
+    }
+
+    .custom-next {
+        right: 10%;
+    }
+
+    /* Make the button icons larger */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+    }
+

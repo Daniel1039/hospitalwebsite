@@ -2,35 +2,54 @@
 {% load static %}
 {% block content %}
 
-<!--Home Slider Start-->
-<div class="banner">
-    <div class="home-slider owl-carousel">
-        <!--Banner Item Start-->
-        <div class="banner-item slide1 overlay">
-            <div class="container">
-                <div class="head1">
-                    <h2 class="text-white">Get Our Best <span class="text-primary">Care</span> With Us</h2>
-                </div>
-                <div class="para1">
-
-                    <p>we believe in treating every patient like family. Our dedicated team combines advanced medical
-                        expertise with heartfelt compassion to provide a healing environment where you can feel safe and
-                        supported. Here, you are not just a patient; you are a valued individual deserving of the best
-                        care possible.</p>
-
-                </div>
-                <div class="banner-btn overflow-hidden">
-                    <a href="{% url 'appointment' %}" class="btn btn-primary">make-an-appointment</a>
-                    <a href="{% url 'about' %}" class="btn btn-dark">Learn More</a>
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active">
+            <div style="position: relative;">
+                <!-- Responsive Image -->
+                <img src="{% static 'img/hp3.jpg' %}" class="d-block w-100 img-fluid" alt="...">
+                
+                <!-- Linear gradient overlay -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, #08003ab3, #08003ab3);"></div>
+                
+                <!-- Text and Links (Centered) -->
+                <div class="carousel-caption d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h1 class="carousel-text text-white">We believe in treating every patient like family</h1>
+                        <div class="banner-btn mt-4">
+                            <a href="{% url 'appointment' %}" class="btn btn-primary" style="margin-right: 10px;">Make an Appointment</a>
+                            <a href="{% url 'about' %}" class="btn btn-dark">Learn More</a>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
+        
+        <!-- Second Slide -->
+        <div class="carousel-item">
+            <div style="position: relative;">
+                <!-- Responsive Image -->
+                <img src="{% static 'img/hp3.jpg' %}" class="d-block w-100 img-fluid" alt="...">
+                
+                <!-- Linear gradient overlay -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, #08003ab3, #08003ab3);"></div>
+                
+                <!-- Text and Links (Centered) -->
+                <div class="carousel-caption d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h1 class="carousel-text text-white">Our goal is to provide quality care with compassion</h1>
+                        <div class="banner-btn mt-4">
+                            <a href="{% url 'appointment' %}" class="btn btn-primary" style="margin-right: 10px;">Make an Appointment</a>
+                            <a href="{% url 'about' %}" class="btn btn-dark">Learn More</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-  
-</div>
 
 <!--Home Slider End-->
 
