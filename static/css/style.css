@@ -13466,24 +13466,43 @@ footer.bg-dark .footer-social ul li a:hover {
       font-size: 1.5rem; /* Adjust font size for mobile */
   }
 }
+/* Centering the text properly */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures vertical centering */
+  width: 100%;
+  padding: 0 15px; /* Prevent text overflow on smaller screens */
+}
+
+/* Responsive adjustments for h1 text */
+.carousel-item .carousel-text {
+  font-size: 2.5rem; /* Default font size for larger screens */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .carousel-item .carousel-text {
+      font-size: 1.8rem; /* Reduce font size on smaller screens */
+      line-height: 1.3; /* Adjust line height for better spacing */
+      padding: 0 10px; /* Add padding to avoid cutting off text */
+  }
+
+  .carousel-caption {
+      padding: 0 10px; /* Ensure proper spacing for smaller screens */
+      top: 50%; /* Keep text vertically centered */
+  }
+}
 
 
-    /* Ensuring text is white */
-    .carousel-item .carousel-text {
-        color: white !important;
-        font-size: 2.5rem; /* Default font size */
-    }
 
-    /* Centering the carousel content */
-    .carousel-caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 100%; /* Ensure full width */
-    }
-
+    
     /* Adding space between the text and the buttons */
     .carousel-item .banner-btn {
         margin-top: 10px;
@@ -13500,21 +13519,13 @@ footer.bg-dark .footer-social ul li a:hover {
         padding: 15px 30px;
     }
 
-    /* Mobile-specific adjustments */
-    @media (max-width: 768px) {
-        .carousel-item .carousel-text {
-            font-size: 1.8rem; /* Smaller text on mobile */
-            padding: 0 15px;
-        }
-
+   
         .carousel-item .banner-btn .btn {
             width: 80%;
             margin-bottom: 10px;
         }
 
-        .carousel-item .carousel-caption {
-            top: 50% !important; /* Ensure the text remains centered on mobile */
-        }
+      
     }
 
     /* Position the previous and next buttons beside the text */
