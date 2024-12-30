@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDANTE</title>
+    {% load static %}
+    
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--Preloader Start-->
+	<div class="preloader">
+		<img src="{% static 'img/preloader.gif'%}" alt="Preloader"> 
+	</div>
+	<!--Preloader End-->
+    
+    <!--Header Start-->
+    <header>
+        <!--Topbar Start-->
+        <div class="topbar bg-light pt-1 pb-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <!--Header Contact Start-->
+                        <div class="header-contact">
+
+                            <span class="email"><i class="fa-regular fa-envelope"></i> makanjuola1039@gmail.com</span>
+                            <span class="phone"><i class="fa-solid fa-phone"></i> +2349068398792</span>
+
+                        </div>
+                        <!--Header Contact Start-->
+                    </div>
+                    <div class="col-md-5">
+                        <!--Header Social Links Start-->
+                        <div class="header-social">
+                            <ul>
+                                <li><a href="#"  title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"  title="Twiiter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"  title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#"  title="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--Header Social Links End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Topbar End-->
+
+        <!--Header Information Start-->
+        <div class="header-info bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="logo desktop-logo">
+
+                            <a href="index-2.html"><h2>D<span class="text-primary">MARK</span></h2></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="information">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <!--Info Block Start-->
+                                    <div class="info-block">
+                                        <div class="icon text-primary">
+                                            <i class="fa-solid fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="info-content">                                            
+                                            <div class="info-head">
+                                                <h4>Address:</h4>
+                                            </div>
+                                            <div class="info-text">
+
+                                                <span>NIGERIA.</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Info Block End-->                                    
+                                </div>
+                                
+                                <div class="col-sm-6 col-md-4">
+                                    <!--Info Block Start-->
+                                    <div class="info-block">
+                                        <div class="icon text-primary">
+                                            <i class="fa-regular fa-clock"></i>
+                                        </div>
+                                        <div class="info-content">                                            
+                                            <div class="info-head">
+                                                <h4>Opening Time:</h4>
+                                            </div>
+                                            <div class="info-text">
+                                                <span>10:00AM - 05:00PM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Info Block End-->                                    
+                                </div>
+
+                                <div class="col-sm-6 col-md-4">
+                                    <!--Info Block Start-->
+                                    <div class="info-block">
+                                        <div class="icon text-primary">
+                                            <i class="fa-solid fa-headset"></i>
+                                        </div>
+                                        <div class="info-content">                                            
+                                            <div class="info-head">
+                                                <h4>Helpline:</h4>
+                                            </div>
+                                            <div class="info-text">
+                                                <span>7 days - 24 Hours</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Info Block End-->                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Information End-->
+
+        <!--Primary Navigation Start-->
+        <div class="primary-nav bg-primary">
+            <div class="container">
+                <div class="navigation">
+                    <ul class="menu">
+                        <li><a href="{%url 'home' %}">Home</a></li> 
+                        <li><a href="{% url 'about'%}">About Us</a></li> 
+                        <li><a href="{% url 'contact'%}">Contact Us</a></li>
+                       
+                        <!-- <li><a href="doctors.html">Doctors</a></li>                        
+                        <li class="has-submenu"><a href="blog-right.html">Blog</a>
+                            <ul class="submenu bg-primary">
+                                <li><a href="blog-fullwidth.html">Blog Fullwidth</a></li>
+                                <li><a href="blog-left.html">Blog Left</a></li>
+                                <li><a href="blog-right.html">Blog Right</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>                       
+                            </ul>
+                        </li> -->
+                        <li><a href="{% url 'appointment'%}">make-an-appointment</a></li>
+                        <li><a href="{% url 'manage'%}">Message</a></li>
+                        <!-- <a href="{% url 'logout' %}">Logout</a> -->
+                        
+                        <li class="nav-item" role="presentation">
+                            <a href="{% url 'manage' %}" style="float: left;cursor:pointer;" aria-expanded="true" title="You Have 6 New Appointments">
+                              <i class="far fa-bell" style="font-size: 20px; float: left; color: black">
+                              </i>
+                          </a>
+                          <span class="badge badge-danger">{{count}}</span>
+                        </li>
+                        <!-- <li><a href="contact.html">Contact Us</a></li> -->
+                    </ul>
+                    
+                </div>
+            </div>            
+            <div class="mobile-nav">
+                <div class="logo mobile-logo">
+                    <a href="index-2.html"><h2 class="text-white">BD<span class="text-white">LAB</span></h2></a>
+                </div>
+            </div>
+        </div>
+       {% block content %}
+       {% endblock%}
+    <!--Footer Start-->
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Subscribe Now</h4>
+                        <div class="subscribe-widget">
+
+                            <!-- <p>Lorem ipsum dolor sit amet conse ctetur adipis icing elit. Sunt at quibu sdam illo quae tempor ibus! Nobis animi id expedita culpa aut mollitia.</p> -->
+
+                            <div class="subscribe-form mt-4">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter Email">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-white" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Usefull Links</h4>
+                        <div class="links">
+                            <ul>
+
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">make-an-appointment</a></li>
+                                <!-- <li><a href="#">Web Research</a></li>
+                                <li><a href="#">Product Research</a></li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Top Pages</h4>
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Homepage</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+
+                                <!-- <li><a href="#">Privecy Policy</a></li>
+                                <li><a href="#">Terms and Conditions</a></li> -->
+
+                                <li><a href="#">Live Chat</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Social Links</h4>
+                        <!-- <p>Lorem ipsum dolor sit amet conse ctetur adipis icing elit. Sunt at quibu sdam illo quae tempor ibus! Nobis animi id expedita culpa aut mollitia.</p> -->
+
+                        <div class="footer-social mt-3">
+                            <ul>
+                                <li class="facebook"><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#" title="Twiiter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#" title="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+                                <li><a href="#" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright bg-dark text-center">
+
+            <p>All Rights Reserved by <a href="#">DMARK</a></p>
+
+        </div>
+    </footer>
+    <!--Footer End-->
+
+    <!--Scroll to Top-->
+    <div class="scrolltotop">
+        <a href="#"><i class="fa-solid fa-long-arrow-alt-up"></i></a>
+    </div>
+
+    <!--Javascripts-->
+    <script src="{% static 'js/jquery.min.js' %}"></script> 
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        (function($){
+            // Owl Carousel instantiate
+            $('.home-slider').owlCarousel({
+                'items'         : 1,
+                'dots'          : false,
+                'navText'       : ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+                'loop'          : true,
+                'animateIn'     : 'fadeIn',
+                'animateOut'    : 'fadeOut',
+                'autoplay'      : true,
+                'mouseDrag'     : false,
+                'responsive'    : {
+                    992         : {                    
+                        'nav'           : true
+                    }
+                }
+            });
+            // Nice select instantiate
+            $('.niceselect').niceSelect();
+        }(jQuery))
+    </script>
+</body>
+
+
+</html>
